@@ -1,0 +1,379 @@
+We need to identify the differences in behaviour between the casual and the member users.
+
+--CALCULATING AVERAGE DRIVING TIME OF MEMBERS AND CASUAL RIDERS
+
+select ride_id, rideable_type, start_station_name, end_station_name,
+start_lat, start_lng, end_lat, end_lng, member_casual, 
+datediff(minute, started_at, ended_at) AS [driving_time] from tripdata_202101
+
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202101] from
+tripdata_202101
+group by member_casual
+
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202102] from
+tripdata_202102
+group by member_casual
+
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202103] from
+tripdata_202103
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202104] from
+tripdata_202104
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202105] from
+tripdata_202105
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202106] from
+tripdata_202106
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202107] from
+tripdata_202107
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202108] from
+tripdata_202108
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202109] from
+tripdata_202109
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202110] from
+tripdata_202110
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202111] from
+tripdata_202111
+group by member_casual
+select member_casual, avg(datediff(minute, started_at, ended_at)) AS [driving_time_202112] from
+tripdata_202112
+group by member_casual
+
+--CALCULATING DRIVING TIME OF MEMBERS AND CASUAL DRIVERS
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_01]
+from tripdata_202101 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_02]
+from tripdata_202102 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_03]
+from tripdata_202103 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_04]
+from tripdata_202104
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_05]
+from tripdata_202105 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_06]
+from tripdata_202106 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_07]
+from tripdata_202107 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_08]
+from tripdata_202108 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_09]
+from tripdata_202109 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_10]
+from tripdata_202110 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_11]
+from tripdata_202111 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_12]
+from tripdata_202112 
+where member_casual = 'Member'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_01]
+from tripdata_202101 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_02]
+from tripdata_202102 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_03]
+from tripdata_202103 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_04]
+from tripdata_202104 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_05]
+from tripdata_202105 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_06]
+from tripdata_202106 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_07]
+from tripdata_202107 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_08]
+from tripdata_202108 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_09]
+from tripdata_202109 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_10]
+from tripdata_202110 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_11]
+from tripdata_202111 
+where member_casual = 'Casual'
+
+select count(member_casual)*avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_12]
+from tripdata_202112
+where member_casual = 'Casual'
+
+--AVERAGE DISTANCE OF MEMBERS AND CASUAL RIDERS
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_01]
+		  from tripdata_202101
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_02]
+		  from tripdata_202102
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_03]
+		  from tripdata_202103
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_04]
+		  from tripdata_202104
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_05]
+		  from tripdata_202105
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_06]
+		  from tripdata_202106
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_07]
+		  from tripdata_202107
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_08]
+		  from tripdata_202108
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_09]
+		  from tripdata_202109
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_10]
+		  from tripdata_202110
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_11]
+		  from tripdata_202111
+		  group by member_casual
+
+SELECT member_casual, avg(3956 * 2 * ASIN(SQRT( POWER(SIN((start_lat - abs(end_lat))*pi()/180/2), 2) 
+              + COS(start_lng*pi()/180)*COS(abs(end_lat)*pi()/180)  
+              * POWER(SIN((start_lng - end_lng)*pi()/180/2), 2))))
+          AS [avg_distance_km_12]
+		  from tripdata_202112
+		  group by member_casual
+      
+ --Number of Member and Casual Riders of Rideable Types
+  
+  USE ciyclistic
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202101],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202101 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202102],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202102 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202103],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202103 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202104],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202104 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202105],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202105 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202106],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202106 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202107],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202107 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202108],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202108 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202109],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202109 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202110],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202110 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202111],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202111 where member_casual = 'member'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_member_202112],
+count(member_casual) AS [Count of Member Riders] 
+from tripdata_202112 where member_casual = 'member'
+group by rideable_type
+
+
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202101],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202101 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202102],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202102 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202103],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202103 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202104],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202104 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202105],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202105 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202106],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202106 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202107],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202107 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202108],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202108 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202109],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202109 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202110],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202110 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202111],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202111 where member_casual = 'casual'
+group by rideable_type
+
+select rideable_type, 
+avg(datediff(minute, started_at, ended_at)) AS [driving_time_casual_202112],
+count(member_casual) AS [Count of Casual Riders] 
+from tripdata_202112 where member_casual = 'casual'
+group by rideable_type
