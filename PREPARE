@@ -1,0 +1,21 @@
+1) Download data and store it appropriately.
+
+https://divvy-tripdata.s3.amazonaws.com/index.html
+
+ 202101-divvy-tripdata.zip	Feb 5th 2021, 12:52:59 am	3.66 MB	ZIP file
+ 202102-divvy-tripdata.zip	Mar 10th 2021, 03:03:24 am	1.91 MB	ZIP file
+ 202103-divvy-tripdata.zip	Apr 8th 2021, 05:28:53 pm	8.02 MB	ZIP file
+ 202104-divvy-tripdata.zip	May 7th 2021, 05:52:05 pm	11.78 MB	ZIP file
+ 202105-divvy-tripdata.zip	Jun 11th 2021, 08:10:18 pm	18.89 MB	ZIP file
+ 202106-divvy-tripdata.zip	Jul 16th 2021, 02:22:05 am	26.52 MB	ZIP file
+ 202107-divvy-tripdata.zip	Aug 14th 2021, 09:06:49 am	29.68 MB	ZIP file
+ 202108-divvy-tripdata.zip	Sep 8th 2021, 09:10:46 pm	27.88 MB	ZIP file
+ 202109-divvy-tripdata.zip	Oct 4th 2021, 08:21:39 pm	27.48 MB	ZIP file
+ 202110-divvy-tripdata.zip	Nov 4th 2021, 10:58:36 pm	23.01 MB	ZIP file
+ 202111-divvy-tripdata.zip	Dec 8th 2021, 11:19:04 pm	13.82 MB	ZIP file
+ 202112-divvy-tripdata.zip	Jan 6th 2022, 07:18:45 pm	9.33 MB	ZIP file
+
+
+2) The Credibility of The Data: The datasets have a different name because Cyclistic is a fictional company. For the purposes of this case study,
+the datasets are appropriate and will enable you to answer the business questions. The data has been made available by
+Motivate International Inc. under this license.
