@@ -1,0 +1,153 @@
+Cleaning the data in MS SQL
+
+delete from tripdata_202101 
+where start_station_name is null
+
+delete from tripdata_202101 
+where end_station_name is null
+
+delete from tripdata_202101 
+where end_lat is null
+
+delete from tripdata_202101 
+where end_lng is null
+
+delete from tripdata_202102 
+where start_station_name is null
+
+delete from tripdata_202102 
+where end_station_name is null
+
+delete from tripdata_202102 
+where end_lat is null
+
+delete from tripdata_202102 
+where end_lng is null
+
+
+delete from tripdata_202103 
+where start_station_name is null
+
+delete from tripdata_202103 
+where end_station_name is null
+
+delete from tripdata_202103 
+where end_lat is null
+
+delete from tripdata_202103 
+where end_lng is null
+
+delete from tripdata_202104 
+where start_station_name is null
+
+delete from tripdata_202104 
+where end_station_name is null
+
+delete from tripdata_202104 
+where end_lat is null
+
+delete from tripdata_202104 
+where end_lng is null
+
+
+delete from tripdata_202105 
+where start_station_name is null
+
+delete from tripdata_202105 
+where end_station_name is null
+
+delete from tripdata_202105 
+where end_lat is null
+
+delete from tripdata_202105 
+where end_lng is null
+
+delete from tripdata_202106 
+where start_station_name is null
+
+delete from tripdata_202106 
+where end_station_name is null
+
+delete from tripdata_202106 
+where end_lat is null
+
+delete from tripdata_202106 
+where end_lng is null
+
+
+delete from tripdata_202107 
+where start_station_name is null
+
+delete from tripdata_202107 
+where end_station_name is null
+
+delete from tripdata_202107
+where end_lat is null
+
+delete from tripdata_202107 
+where end_lng is null
+
+
+delete from tripdata_202108 
+where start_station_name is null
+
+delete from tripdata_202108
+where end_station_name is null
+
+delete from tripdata_202108 
+where end_lat is null
+
+delete from tripdata_202108 
+where end_lng is null
+
+
+delete from tripdata_202109 
+where start_station_name is null
+
+delete from tripdata_202109 
+where end_station_name is null
+
+delete from tripdata_202109 
+where end_lat is null
+
+delete from tripdata_202109 
+where end_lng is null
+
+
+delete from tripdata_202110 
+where start_station_name is null
+
+delete from tripdata_202110 
+where end_station_name is null
+
+delete from tripdata_202110
+where end_lat is null
+
+delete from tripdata_202110
+where end_lng is null
+
+
+delete from tripdata_202111 
+where start_station_name is null
+
+delete from tripdata_202111 
+where end_station_name is null
+
+delete from tripdata_202111
+where end_lat is null
+
+delete from tripdata_202111
+where end_lng is null
+
+
+delete from tripdata_202112 
+where start_station_name is null
+
+delete from tripdata_202112 
+where end_station_name is null
+
+delete from tripdata_202112
+where end_lat is null
+
+delete from tripdata_202112
+where end_lng is null
